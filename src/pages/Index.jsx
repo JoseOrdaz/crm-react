@@ -33,7 +33,7 @@ const clientes = useLoaderData();
                 {clientes.map(cliente => (
                   <Cliente 
                     cliente={cliente}
-                    key={cliente}              
+                    key={cliente.id}              
                   />
                 ))}
               </tbody>
