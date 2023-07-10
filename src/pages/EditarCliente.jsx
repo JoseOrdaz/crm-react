@@ -1,10 +1,17 @@
-import { Form, useNavigate, useLoaderData, redirect, useActionData } from "react-router-dom";
+import {
+  Form,
+  useNavigate,
+  useLoaderData,
+  redirect,
+  useActionData,
+} from "react-router-dom";
 import { actualizarClientes, obtenerCliente } from "../../data/Clientes";
 import Formulario from "../components/Formulario";
 import Error from "../components/Error";
 
 export async function loader({ params }) {
   const cliente = await obtenerCliente(params.clienteId);
+
   if (Object.values(cliente).length === 0) {
     throw new Response("", {
       status: 400,
@@ -38,6 +45,7 @@ export async function action({ request, params }) {
   }
 
   await actualizarClientes(params.clienteId, datos);
+  console.log(params.clienteId, datos);
   return redirect("/");
 }
 
@@ -61,10 +69,11 @@ function EditarCliente() {
       </div>
 
       <div className="bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10 mt-20">
-        {errores?.length && errores.map((error, i) => <Error key={i}>{error}</Error>)}
+        {errores?.length &&
+          errores.map((error, i) => <Error key={i}>{error}</Error>)}
 
         <Form method="put" noValidate>
-          <Formulario cliente={cliente} />
+          <Formulario cliente={cliente.data} />
           <input
             type="submit"
             className="mt-5 w-full bg-sky-800 p-3 uppercase font-bold text-white rounded text-lg"

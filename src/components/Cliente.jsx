@@ -8,9 +8,16 @@ export async function action ({params}) {
 
 }
 
+
+
 function Cliente({ cliente }) {
-  const { nombre, empresa, email, telefono, id } = cliente;
+  const { id } = cliente;
+  const { nombre, empresa, email, telefono } = cliente.attributes;
+ 
   const navigate = useNavigate();
+
+  
+  
   return (
     <>
       <tr className="border-b">
@@ -26,6 +33,7 @@ function Cliente({ cliente }) {
           <p className="text-gray-800">
             <span className="text-gray-800 uppercase font-bold">Tel: </span>
             {telefono}
+        
           </p>
         </td>
         <td className="p-4 flex gap-3">

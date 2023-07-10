@@ -1,14 +1,6 @@
 {
   "clientes": [
     {
-      "nombre": "Juanaaa",
-      "empresa": "Codigo Con Juan",
-      "email": "juan@juan.com",
-      "telefono": "102013313",
-      "notas": "aaa",
-      "id": 1
-    },
-    {
       "nombre": "Kareneeee",
       "empresa": "Codigo Con Juan",
       "email": "karen@juan.com",
@@ -17,11 +9,12 @@
       "id": 2
     },
     {
-      "id": 3,
-      "nombre": "Josue",
-      "telefono": 31983913,
+      "nombre": "Josueaaaa",
+      "empresa": "Codigo Con Juan",
       "email": "josue@juan.com",
-      "empresa": "Codigo Con Juan"
+      "telefono": "31983913",
+      "notas": "asda",
+      "id": 3
     },
     {
       "id": 4,
@@ -31,11 +24,12 @@
       "empresa": "Codigo Con Juan"
     },
     {
-      "id": 5,
-      "nombre": "Pedro",
-      "telefono": 1398198938,
-      "email": "pedro@juan.com",
-      "empresa": "Codigo Con Juan"
+      "nombre": "Buenorraaaaaaaaaa",
+      "empresa": "jasda",
+      "email": "aasd@asd.es",
+      "telefono": "54654654",
+      "notas": "asddasd",
+      "id": 5
     }
   ]
 }
